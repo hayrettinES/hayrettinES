@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400">
+  <defs>
+    <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.2" fill="#000" opacity=".35"/>
+    </pattern>
+    <radialGradient id="vig" cx=".5" cy=".5" r=".75">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".75"/>
+    </radialGradient>
+    <pattern id="pipes" width="6" height="14" patternUnits="userSpaceOnUse">
+      <rect x="1" y="1" width="2.2" height="12" fill="#ffb000"/>
+    </pattern>
+    <pattern id="pipesHi" width="6" height="14" patternUnits="userSpaceOnUse">
+      <rect x="1" y="1" width="2.2" height="12" fill="#fff1d0"/>
+    </pattern>
+    <filter id="glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="screen"><rect x="28" y="28" width="844" height="344" rx="18"/></clipPath>
+  </defs>
+  <style>
+    text{font-family:Consolas,Menlo,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;fill:#ffb000}
+    .dim{fill:#8a5a12}
+    .hi{fill:#ffd27a}
+    .inv{fill:#0c0702;font-weight:700}
+  </style>
+
+  <rect width="900" height="400" rx="26" fill="#17130e"/>
+  <rect x="10" y="10" width="880" height="380" rx="24" fill="none" stroke="#2a231a" stroke-width="2"/>
+  <rect x="28" y="28" width="844" height="344" rx="18" fill="#0c0702"/>
+
+  <g clip-path="url(#screen)">
+    <g filter="url(#glow)">
+      <!-- meters -->
+      <text x="56" y="64" class="hi">CPU</text><text x="90" y="64">[</text><text x="402" y="64">]</text>
+      <rect x="100" y="53" width="200" height="14" fill="url(#pipes)">
+        <animate attributeName="width" values="200;260;170;290;220;200" dur="5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="56" y="86" class="hi">COF</text><text x="90" y="86">[</text><text x="402" y="86">]</text>
+      <rect x="100" y="75" width="290" height="14" fill="url(#pipesHi)">
+        <animate attributeName="width" values="294;294;240;180;120;294" dur="9s" repeatCount="indefinite"/>
+      </rect>
+      <text x="56" y="108" class="hi">IDE</text><text x="90" y="108">[</text><text x="402" y="108">]</text>
+      <rect x="100" y="97" width="150" height="14" fill="url(#pipes)">
+        <animate attributeName="width" values="150;210;190;250;150" dur="6.5s" repeatCount="indefinite"/>
+      </rect>
+
+      <text x="470" y="64"><tspan class="dim">Tasks: </tspan><tspan class="hi">7</tspan>, 1 daydreaming</text>
+      <text x="470" y="86"><tspan class="dim">Load average: </tspan>curious curious curious</text>
+      <text x="470" y="108"><tspan class="dim">Uptime: </tspan>since 2024, no reboots planned</text>
+
+      <!-- table header -->
+      <rect x="28" y="124" width="844" height="20" fill="#ffb000"/>
+      <text x="56" y="139" class="inv">PID</text>
+      <text x="110" y="139" class="inv">USER</text>
+      <text x="220" y="139" class="inv">CPU</text>
+      <text x="350" y="139" class="inv">S</text>
+      <text x="390" y="139" class="inv">COMMAND</text>
+
+      <!-- moving selection -->
+      <rect x="28" y="149" width="844" height="22" fill="#ffb000" opacity=".16">
+        <animateTransform attributeName="transform" type="translate" calcMode="discrete" values="0 0;0 24;0 48;0 72;0 96;0 120;0 144" dur="10.5s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- rows -->
+      <g>
+        <text x="56" y="165" class="dim">1001</text><text x="110" y="165">hayrettin</text>
+        <rect x="220" y="154" width="90" height="14" fill="url(#pipesHi)"><animate attributeName="width" values="90;114;72;120;90" dur="3.1s" repeatCount="indefinite"/></rect>
+        <text x="350" y="165" class="hi">R</text><text x="390" y="165"><tspan class="hi">synthcheck</tspan> --offline --models 3 --samples 74788</text>
+      </g>
+      <g>
+        <text x="56" y="189" class="dim">1002</text><text x="110" y="189">hayrettin</text>
+        <rect x="220" y="178" width="66" height="14" fill="url(#pipes)"><animate attributeName="width" values="66;96;54;84;66" dur="4.3s" repeatCount="indefinite"/></rect>
+        <text x="350" y="189" class="hi">R</text><text x="390" y="189"><tspan class="hi">remote-sense</tspan> --band ndvi --source orbit</text>
+      </g>
+      <g>
+        <text x="56" y="213" class="dim">1003</text><text x="110" y="213">hayrettin</text>
+        <rect x="220" y="202" width="48" height="14" fill="url(#pipes)"><animate attributeName="width" values="48;30;72;42;48" dur="3.7s" repeatCount="indefinite"/></rect>
+        <text x="350" y="213">S</text><text x="390" y="213"><tspan class="hi">vbox-tool</tspan> --spawn vm --nested</text>
+      </g>
+      <g>
+        <text x="56" y="237" class="dim">1004</text><text x="110" y="237">hayrettin</text>
+        <rect x="220" y="226" width="60" height="14" fill="url(#pipes)"><animate attributeName="width" values="60;90;36;78;60" dur="2.9s" repeatCount="indefinite"/></rect>
+        <text x="350" y="237" class="hi">R</text><text x="390" y="237"><tspan class="hi">eduverse-chat</tspan> --realtime --aspnet-mvc</text>
+      </g>
+      <g>
+        <text x="56" y="261" class="dim">1005</text><text x="110" y="261">hayrettin</text>
+        <rect x="220" y="250" width="78" height="14" fill="url(#pipes)"><animate attributeName="width" values="78;102;60;108;78" dur="5.3s" repeatCount="indefinite"/></rect>
+        <text x="350" y="261" class="hi">R</text><text x="390" y="261"><tspan class="hi">big-data-labs</tspan> --week next</text>
+      </g>
+      <g>
+        <text x="56" y="285" class="dim">1006</text><text x="110" y="285">hayrettin</text>
+        <rect x="220" y="274" width="30" height="14" fill="url(#pipes)"><animate attributeName="width" values="30;48;18;42;30" dur="3.3s" repeatCount="indefinite"/></rect>
+        <text x="350" y="285">S</text><text x="390" y="285"><tspan class="hi">link-forensics</tspan> --scan url --before-click</text>
+      </g>
+      <g>
+        <text x="56" y="309" class="dim">1007</text><text x="110" y="309">hayrettin</text>
+        <rect x="220" y="298" width="42" height="14" fill="url(#pipes)"><animate attributeName="width" values="42;66;24;60;42" dur="4.1s" repeatCount="indefinite"/></rect>
+        <text x="350" y="309">S</text><text x="390" y="309"><tspan class="hi">there-is-escape</tspan> --level 1</text>
+      </g>
+
+      <!-- function keys -->
+      <text x="56" y="352" xml:space="preserve"><tspan class="hi">F1</tspan><tspan class="dim">Help  </tspan><tspan class="hi">F2</tspan><tspan class="dim">Setup  </tspan><tspan class="hi">F3</tspan><tspan class="dim">Search  </tspan><tspan class="hi">F5</tspan><tspan class="dim">Tree  </tspan><tspan class="hi">F6</tspan><tspan class="dim">SortBy  </tspan><tspan class="hi">F9</tspan><tspan class="dim">Kill (never)  </tspan><tspan class="hi">F10</tspan><tspan class="dim">Quit (also never)</tspan></text>
+    </g>
+
+    <rect x="28" y="28" width="844" height="344" fill="url(#scan)"/>
+    <rect x="28" y="28" width="844" height="344" fill="url(#vig)"/>
+    <rect x="28" y="28" width="844" height="50" fill="#ffd27a" opacity=".025">
+      <animate attributeName="y" from="-50" to="372" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <circle cx="852" cy="382" r="3" fill="#ffb000"><animate attributeName="opacity" values="1;.4;1" dur="2.4s" repeatCount="indefinite"/></circle>
+</svg>

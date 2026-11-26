@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <defs>
+    <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.2" fill="#000" opacity=".35"/>
+    </pattern>
+    <radialGradient id="vig" cx=".5" cy=".5" r=".8">
+      <stop offset=".5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".75"/>
+    </radialGradient>
+    <filter id="glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="screen"><rect x="28" y="28" width="844" height="144" rx="18"/></clipPath>
+  </defs>
+  <style>
+    text{font-family:Consolas,Menlo,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;fill:#ffb000}
+    .dim{fill:#8a5a12}
+    .hi{fill:#ffd27a}
+    .ok{fill:#ffe9b8;font-weight:700}
+  </style>
+
+  <rect width="900" height="200" rx="26" fill="#17130e"/>
+  <rect x="10" y="10" width="880" height="180" rx="24" fill="none" stroke="#2a231a" stroke-width="2"/>
+  <rect x="28" y="28" width="844" height="144" rx="18" fill="#0c0702"/>
+
+  <g clip-path="url(#screen)">
+    <g filter="url(#glow)">
+      <text x="56" y="62"><tspan class="hi">hayrettin@ES:~$</tspan> logout</text>
+      <text x="56" y="86">Saving session: 16 repos, 1 profile, too many ideas</text>
+      <text x="700" y="86" class="ok">[  OK  ]</text>
+      <text x="56" y="110">Thanks for scrolling all the way down.</text>
+      <text x="56" y="134" class="dim">System halted. It is now safe to open an issue on any repo.</text>
+      <rect x="56" y="144" width="9" height="15" fill="#ffd27a">
+        <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <rect x="28" y="28" width="844" height="144" fill="url(#scan)"/>
+    <rect x="28" y="28" width="844" height="144" fill="url(#vig)"/>
+  </g>
+  <circle cx="852" cy="182" r="3" fill="#8a5a12"/>
+</svg>

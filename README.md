@@ -1,100 +1,81 @@
 <div align="center">
-  <img src="assets/header.svg" width="100%" alt="Plate I: Umwelt, the world as one being can sense it and act upon it. hayrettinES builds umwelten for machines."/>
+  <img src="assets/boot.svg" width="100%" alt="hayrettinOS boot screen: detects deepfake, remote sensing, VirtualBox, web, game and big data devices, then shows the hayrettinES ASCII logo"/>
 </div>
 
 <br/>
 
-> *A tick lives in a world of exactly three signals: the smell of butyric acid, the warmth of skin, the touch of hair.
-> Everything else in the universe does not exist for it.*
-> — after Jakob von Uexküll, 1934
->
-> **Every machine has an umwelt too.** A camera that can't tell a fake face from a real one lives in a smaller world.
-> So does a satellite image nobody reads, or a robot arm that can't feel what it grabs.
-> I write the software that makes those worlds bigger.
+### `~$ whoami`
 
-<br/>
+```text
+  .----------------.      hayrettin@ES
+  | .------------. |      ------------
+  | |  >_        | |      role     developer, builder of odd machines
+  | |            | |      senses   deepfakes · earth from orbit · unsafe links
+  | |            | |      worlds   virtual machines · games · the web
+  | '------------' |      brain    big data · algorithms · edge AI
+  '------.  .------'      status   online, shipping one project at a time
+   .-----'  '-----.
+   '--------------'       type 'scroll' for more ↓
+```
+
+### `~$ htop`
 
 <div align="center">
-  <img src="assets/funktionskreis.svg" width="100%" alt="Plate II: the functional circle. Sense, model, act, share, and back to sense, with my projects on each arc."/>
+  <img src="assets/htop.svg" width="100%" alt="htop-style process list of my projects: synthcheck, remote-sense, vbox-tool, eduverse-chat, big-data-labs, link-forensics, there-is-escape"/>
 </div>
 
-<br/>
+### `~$ ls -la ~/projects`
 
-## 🔬 Specimen Catalogue
+| perms | name | what it does |
+|---|---|---|
+| `drwxr-xr-x` | **[synthcheck/](https://github.com/hayrettinES/synthcheck)** | Multimodal deepfake detection. 74,788 samples, 3 edge AI models, 100% offline. TÜBİTAK 2209-A. |
+| `drwxr-xr-x` | **[big-data-labs/](https://github.com/hayrettinES/b-y-k-veri-payla-mlar-)** | A week-by-week log of big data labs, code included. |
+| `drwxr-xr-x` | **[eduverse-chat/](https://github.com/hayrettinES/EduVerseComChat)** | Real-time web chat with C# and ASP.NET Core MVC. |
+| `drwxr-xr-x` | **[link-forensics/](https://github.com/hayrettinES/linkG-venlikAnalizi)** | Java Swing tool that checks a URL *before* you click it. |
+| `drwxr-xr-x` | **[there-is-escape/](https://github.com/hayrettinES/there-is-escape)** | A small escape game. One rule: get out. |
+| `drwxr-xr-x` | **[algorithms/](https://github.com/hayrettinES/AVL-Agaci)** | [AVL](https://github.com/hayrettinES/AVL-Agaci) · [BFS](https://github.com/hayrettinES/BFS-graph-yapisi) · [DFS](https://github.com/hayrettinES/DFs-graph-yapisi) · [stacks](https://github.com/hayrettinES/Data-S-ralama) |
+| `d---------` | `remote-sensing/` | 🔒 encrypted until release |
+| `d---------` | `vbox-tool/` | 🔒 encrypted until release |
+| `d---------` | `web-apps/` | 🔒 encrypted until release |
 
-<sub>Sorted by which part of the loop they live in. 🟢 catalogued (public) · 🌱 being prepared for release · 🥚 still growing</sub>
+### `~$ cat ~/.stack`
 
-#### 👁️ Merkwelt: machines that perceive
+```text
+┌──────────────┬───────────────────────────────────────────┐
+│ languages    │ C#  ·  Java  ·  Python  ·  JavaScript     │
+│ web          │ ASP.NET Core MVC  ·  HTML  ·  CSS         │
+│ ai           │ edge AI models  ·  offline inference      │
+│ data         │ big data labs  ·  trees  ·  graphs        │
+│ infra        │ VirtualBox  ·  virtual machines           │
+│ play         │ game worlds  ·  escape rooms              │
+└──────────────┴───────────────────────────────────────────┘
+```
 
-| Specimen | What it senses | |
-|---|---|:---:|
-| **[SynthCheck](https://github.com/hayrettinES/synthcheck)** | Whether a face or a voice is real. 74,788 samples, 3 edge AI models, fully offline. TÜBİTAK 2209-A. | 🟢 |
-| **Remote Sensing** | Reading the Earth's surface from orbit. | 🌱 |
-| **[Link Forensics](https://github.com/hayrettinES/linkG-venlikAnalizi)** | Whether a URL is safe *before* the click (Java Swing). | 🟢 |
+### `~$ tail -f /var/log/releases.log`
 
-#### 🧠 Innenwelt: how they think
+```text
+[ queued ]  #01  ............................  to be announced
+[ queued ]  #02  ............................  to be announced
+[ queued ]  #03  ............................  to be announced
+_
+```
 
-| Specimen | What it models | |
-|---|---|:---:|
-| **[Big Data Lab Logs](https://github.com/hayrettinES/b-y-k-veri-payla-mlar-)** | Weekly big data labs: pipelines, code, notes. | 🟢 |
-| **[AVL](https://github.com/hayrettinES/AVL-Agaci) · [BFS](https://github.com/hayrettinES/BFS-graph-yapisi) · [DFS](https://github.com/hayrettinES/DFs-graph-yapisi) · [Stacks](https://github.com/hayrettinES/Data-S-ralama)** | The skeleton under everything: trees that rebalance, graphs to explore, expressions to rewrite. | 🟢 |
+### `~$ ping hayrettinES`
 
-#### ✋ Wirkwelt: machines that act
-
-| Specimen | What it does to the world | |
-|---|---|:---:|
-| **Robotic Arm** | An in-game arm that learns to reach, grip, and place. | 🥚 |
-| **VirtualBox Tooling** | A tool that builds and drives virtual machines: worlds inside worlds. | 🌱 |
-| **[there-is-escape](https://github.com/hayrettinES/there-is-escape)** | A small escape game. A world with one rule: get out. | 🟢 |
-
-#### 🤝 Mitwelt: where machines meet people
-
-| Specimen | Who it connects | |
-|---|---|:---:|
-| **[EduVerse ComChat](https://github.com/hayrettinES/EduVerseComChat)** | Real-time chat, built with C# and ASP.NET Core MVC. | 🟢 |
-| **Web Apps & Sites** | Tracking systems, storefronts, freelancing platforms. | 🌱 |
-
-<br/>
-
-## 🗓️ Release Log
-
-New specimens are released **one at a time, on a schedule**, each with proper documentation. They won't all be dumped here on one day.
-
-| # | Specimen | Release window |
-|:---:|---|---|
-| 01 | *to be announced* | ░░░░░░░░░░ |
-| 02 | *to be announced* | ░░░░░░░░░░ |
-| 03 | *to be announced* | ░░░░░░░░░░ |
-
-<sub>Watch this repo to see when the next one hatches.</sub>
-
-<br/>
-
-## 🧰 Tools of the Field
-
-<p>
-<img src="https://img.shields.io/badge/C%23-f3ecdf?style=flat-square&logo=dotnet&logoColor=2a2622&labelColor=f3ecdf&color=f3ecdf" alt="C#"/>
-<img src="https://img.shields.io/badge/ASP.NET_Core-f3ecdf?style=flat-square&logo=dotnet&logoColor=2a2622" alt="ASP.NET Core"/>
-<img src="https://img.shields.io/badge/Java-f3ecdf?style=flat-square&logo=openjdk&logoColor=2a2622" alt="Java"/>
-<img src="https://img.shields.io/badge/Python-f3ecdf?style=flat-square&logo=python&logoColor=2a2622" alt="Python"/>
-<img src="https://img.shields.io/badge/JavaScript-f3ecdf?style=flat-square&logo=javascript&logoColor=2a2622" alt="JavaScript"/>
-<img src="https://img.shields.io/badge/HTML%2FCSS-f3ecdf?style=flat-square&logo=html5&logoColor=2a2622" alt="HTML/CSS"/>
-<img src="https://img.shields.io/badge/VirtualBox-f3ecdf?style=flat-square&logo=virtualbox&logoColor=2a2622" alt="VirtualBox"/>
-<img src="https://img.shields.io/badge/Edge_AI-d2462d?style=flat-square&logo=tensorflow&logoColor=f3ecdf" alt="Edge AI"/>
-</p>
-
-<br/>
-
-## ✉️ Send a Signal Into My Umwelt
+```text
+PING hayrettinES (github.com): 56 data bytes
+64 bytes from hayrettinES: icmp_seq=1 ttl=64 time=0.42 ms
+--- reply received, channel open ---
+```
 
 <!-- Add more channels, for example:
-<a href="https://linkedin.com/in/YOUR-NAME"><img src="https://img.shields.io/badge/LinkedIn-2a2622?style=for-the-badge&logo=linkedin&logoColor=f3ecdf"/></a>
+<a href="https://linkedin.com/in/YOUR-NAME"><img src="https://img.shields.io/badge/linkedin-0c0702?style=for-the-badge&logo=linkedin&logoColor=ffb000"/></a>
 -->
-<a href="https://github.com/hayrettinES"><img src="https://img.shields.io/badge/GitHub-2a2622?style=for-the-badge&logo=github&logoColor=f3ecdf" alt="GitHub"/></a>
-<a href="https://github.com/hayrettinES/synthcheck/issues"><img src="https://img.shields.io/badge/Open_an_issue_on_any_specimen-d2462d?style=for-the-badge&logoColor=f3ecdf" alt="Open an issue"/></a>
+<a href="https://github.com/hayrettinES?tab=repositories"><img src="https://img.shields.io/badge/~/repositories-0c0702?style=for-the-badge&logo=github&logoColor=ffb000" alt="Repositories"/></a>
+<a href="https://github.com/hayrettinES/synthcheck/issues"><img src="https://img.shields.io/badge/open_an_issue-ffb000?style=for-the-badge&logoColor=0c0702" alt="Open an issue"/></a>
 
 <br/><br/>
 
 <div align="center">
-  <img src="assets/footer.svg" width="100%" alt="These field notes are unfinished. New specimens are catalogued on a schedule."/>
+  <img src="assets/shutdown.svg" width="100%" alt="logout: session saved, system halted"/>
 </div>
