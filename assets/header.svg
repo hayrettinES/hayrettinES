@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <defs>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 .35  0 0 0 0 .28  0 0 0 0 .2  0 0 0 .09 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <radialGradient id="field" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#d2462d" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#d2462d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .serif{font-family:Georgia,'Times New Roman',serif;fill:#2a2622}
+    .sc{font-family:Georgia,serif;font-size:11px;letter-spacing:3px;fill:#7a6b5b}
+    .lab{font-family:Georgia,serif;font-style:italic;font-size:14px;fill:#2a2622}
+    .note{font-family:Georgia,serif;font-size:10.5px;fill:#8a7a68}
+    .ring{fill:none;stroke:#2a2622;stroke-width:1;stroke-dasharray:2 6}
+    .cw{animation:flow 40s linear infinite}.ccw{animation:flow 55s linear infinite reverse}
+    @keyframes flow{to{stroke-dashoffset:-400}}
+    .lid{transform-box:fill-box;transform-origin:center;animation:blink 6s infinite}
+    @keyframes blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+    .node{transform-box:fill-box;transform-origin:center;animation:breathe 3.6s ease-in-out infinite}
+    @keyframes breathe{50%{transform:scale(1.45)}}
+    .soon{animation:fade 2.4s ease-in-out infinite alternate}
+    @keyframes fade{from{opacity:.25}to{opacity:1}}
+  </style>
+
+  <!-- paper -->
+  <rect width="900" height="420" rx="10" fill="#f3ecdf"/>
+  <rect width="900" height="420" rx="10" fill="#f3ecdf" filter="url(#grain)"/>
+  <rect x="14" y="14" width="872" height="392" fill="none" stroke="#2a2622" stroke-width="1.4"/>
+  <rect x="20" y="20" width="860" height="380" fill="none" stroke="#2a2622" stroke-width=".5"/>
+
+  <text x="42" y="44" class="sc">PLATE I.</text>
+  <text x="858" y="44" class="sc" text-anchor="end">FIELD NOTES OF hayrettinES</text>
+
+  <!-- left column: the definition -->
+  <text x="46" y="140" class="serif" style="font-size:84px;font-style:italic">Umwelt</text>
+  <text x="50" y="170" class="serif" style="font-size:15px;fill:#7a6b5b">/ˈʊmvɛlt/ · <tspan font-style="italic">noun</tspan> · German, “surrounding world”</text>
+  <line x1="50" y1="188" x2="410" y2="188" stroke="#2a2622" stroke-width=".6"/>
+  <text x="50" y="216" class="serif" style="font-size:15px">The world exactly as one particular being</text>
+  <text x="50" y="237" class="serif" style="font-size:15px">can <tspan font-style="italic">sense</tspan> it and <tspan font-style="italic">act</tspan> upon it. Nothing more.</text>
+  <text x="50" y="276" class="serif" style="font-size:15px;fill:#d2462d">I build umwelten for machines:</text>
+  <text x="50" y="297" class="serif" style="font-size:15px">the eyes they see with, the worlds they</text>
+  <text x="50" y="318" class="serif" style="font-size:15px">live in, and the hands they reach out with.</text>
+  <text x="50" y="378" class="note">Fig. 1. Sensory field of the subject. Not drawn to scale; the subject refuses to stay still.</text>
+
+  <!-- right: sensory field -->
+  <circle cx="660" cy="215" r="165" fill="url(#field)"/>
+  <circle cx="660" cy="215" r="60"  class="ring cw"/>
+  <circle cx="660" cy="215" r="100" class="ring ccw"/>
+  <circle cx="660" cy="215" r="140" class="ring cw"/>
+  <circle cx="660" cy="215" r="165" class="ring ccw" style="stroke:#d2462d"/>
+
+  <!-- sensing pulse -->
+  <circle cx="660" cy="215" r="30" fill="none" stroke="#d2462d" stroke-width="1.2">
+    <animate attributeName="r" values="30;165" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".9;0" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- the perceiver: an eye -->
+  <g class="lid">
+    <path d="M622 215 Q660 182 698 215 Q660 248 622 215Z" fill="#f3ecdf" stroke="#2a2622" stroke-width="1.6"/>
+    <circle cx="660" cy="215" r="13" fill="none" stroke="#2a2622" stroke-width="1.2"/>
+    <circle cx="660" cy="215" r="6" fill="#d2462d"/>
+  </g>
+
+  <!-- ring 1 (r=60): close senses -->
+  <circle cx="712" cy="185" r="4.5" fill="#2a2622" class="node"/>
+  <text x="722" y="182" class="lab">faces</text>
+  <circle cx="604" cy="238" r="4.5" fill="#2a2622" class="node" style="animation-delay:.6s"/>
+  <text x="594" y="252" class="lab" text-anchor="end">links</text>
+
+  <!-- ring 2 (r=100): mind -->
+  <circle cx="754" cy="249" r="4.5" fill="#2a2622" class="node" style="animation-delay:1.2s"/>
+  <text x="764" y="254" class="lab">data</text>
+  <circle cx="578" cy="158" r="4.5" fill="#2a2622" class="node" style="animation-delay:1.8s"/>
+  <text x="568" y="154" class="lab" text-anchor="end">web</text>
+
+  <!-- ring 3 (r=140): far senses / worlds -->
+  <circle cx="612" cy="83" r="4.5" fill="#2a2622" class="node" style="animation-delay:.3s"/>
+  <text x="602" y="78" class="lab" text-anchor="end">earth, from orbit</text>
+  <circle cx="790" cy="164" r="4.5" fill="#2a2622" class="node" style="animation-delay:2.1s"/>
+  <text x="800" y="150" class="lab" text-anchor="middle">virtual machines</text>
+  <circle cx="545" cy="295" r="4.5" fill="#2a2622" class="node" style="animation-delay:.9s"/>
+  <text x="535" y="300" class="lab" text-anchor="end">games</text>
+
+  <!-- ring 4 (r=175): what's growing -->
+  <g class="soon">
+    <circle cx="786" cy="321" r="5" fill="#f3ecdf" stroke="#d2462d" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <text x="786" y="344" class="lab" text-anchor="middle" style="fill:#d2462d">a robotic arm <tspan style="font-size:11px">(growing)</tspan></text>
+  </g>
+</svg>
